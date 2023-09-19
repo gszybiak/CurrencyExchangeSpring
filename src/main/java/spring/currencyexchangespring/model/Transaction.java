@@ -7,11 +7,11 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="transactions")
-public class Transactions {
+public class Transaction {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
     private Long id;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "userId", unique = true)
     private Customer customer;
     private LocalDate transactionDate;

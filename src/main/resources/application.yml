@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://127.0.0.1:3306/currency_exchange_spring
+    username: root
+    password: mario
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
