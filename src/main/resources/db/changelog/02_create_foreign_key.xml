@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+    <changeSet id="createforeignKeys" author="your-name">
+
+        <addForeignKeyConstraint baseTableName="customers" baseColumnNames="user_id"
+                                 referencedTableName="users" referencedColumnNames="id" constraintName="fk_customers_users"
+                                 onDelete="CASCADE" onUpdate="CASCADE" />
+
+        <addForeignKeyConstraint baseTableName="transactions" baseColumnNames="customer_id"
+                                 referencedTableName="customers" referencedColumnNames="id" constraintName="fk_transactions_customers"
+                                 onDelete="CASCADE" onUpdate="CASCADE" />
+    </changeSet>
+
+</databaseChangeLog>

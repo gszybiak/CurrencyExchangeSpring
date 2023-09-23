@@ -4,7 +4,11 @@ spring:
     username: root
     password: mario
     driver-class-name: org.mariadb.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+  liquibase:
+    change-log: db/changelog/create_cutomers_table.xml
